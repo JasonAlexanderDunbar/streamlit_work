@@ -78,10 +78,10 @@ def main():
 			# more human interpretable.
 			st.success("Text Categorized as: {}".format(prediction))
 
-    elif st.button("Classify with Intermediate Model"):
-                    vect_tect = tweet_cv.transform([tweet_text]).toarray()
-                    predictor = joblib.load(open(os.path.join("NaiveBayesClassification.pkl"), "rb"))
-                    prediction = predictor.predict(vect_tweet)
+                elif st.button("Classify with Intermediate Model"):
+         		vect_tect = tweet_cv.transform([tweet_text]).toarray()
+                    	predictor = joblib.load(open(os.path.join("NaiveBayesClassification.pkl"), "rb"))
+                    	prediction = predictor.predict(vect_tweet)
 
 # Required to let Streamlit instantiate our web app.  
 if __name__ == '__main__':
